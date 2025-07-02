@@ -1,27 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { getCurrentUser } from "@/lib/auth";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Redirect to /auth if not logged in
-    getCurrentUser().then((user) => {
-      if (!user) window.location.href = "/auth";
-      else setLoading(false);
-    });
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-lg text-[var(--text-secondary)]">Loading...</div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
