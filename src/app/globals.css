@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Background */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fdbbca;
+  --bg-tertiary: #fce7f3;
+
+  /* Pastel Pink Accent System */
+  --pink-primary: #ec4899;
+  --pink-secondary: #db2777;
+  --pink-tertiary: #be185d;
+  --pink-light: #fbcfe8;
+  --pink-muted: #f9a8d4;
+
+  /* Text Colors */
+  --text-primary: #ff86af;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-dark: #111827;
+
+  /* Additional Colors */
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility classes */
+.bg-pink-primary {
+  background-color: var(--pink-primary);
+}
+
+.bg-pink-secondary {
+  background-color: var(--pink-secondary);
+}
+
+.bg-pink-tertiary {
+  background-color: var(--pink-tertiary);
+}
+
+.bg-pink-light {
+  background-color: var(--pink-light);
+}
+
+.bg-pink-muted {
+  background-color: var(--pink-muted);
+}
+
+.text-pink-primary {
+  color: var(--pink-primary);
+}
+
+.text-pink-secondary {
+  color: var(--pink-secondary);
+}
+
+.text-pink-tertiary {
+  color: var(--pink-tertiary);
+}
+
+.text-pink-light {
+  color: var(--pink-light);
+}
+
+.text-pink-muted {
+  color: var(--pink-muted);
+}
+
+.border-pink-primary {
+  border-color: var(--pink-primary);
+}
+
+.border-pink-secondary {
+  border-color: var(--pink-secondary);
+}
+
+.border-pink-tertiary {
+  border-color: var(--pink-tertiary);
+}
+
+.border-pink-light {
+  border-color: var(--pink-light);
+}
+
+.border-pink-muted {
+  border-color: var(--pink-muted);
+}
+
+/* Focus states */
+.focus\:ring-pink-primary:focus {
+  --tw-ring-color: var(--pink-primary);
+}
+
+.focus\:border-pink-primary:focus {
+  border-color: var(--pink-primary);
+}
+
+/* Hover states */
+.hover\:bg-pink-secondary:hover {
+  background-color: var(--pink-secondary);
+}
+
+.hover\:bg-pink-tertiary:hover {
+  background-color: var(--pink-tertiary);
+}
+
+.hover\:text-pink-primary:hover {
+  color: var(--pink-primary);
+}
+
+.hover\:text-pink-secondary:hover {
+  color: var(--pink-secondary);
+}
+
+/* Legacy lavender classes for backward compatibility */
+.bg-lavender-primary {
+  background-color: var(--pink-primary);
+}
+
+.bg-lavender-secondary {
+  background-color: var(--pink-secondary);
+}
+
+.bg-lavender-tertiary {
+  background-color: var(--pink-tertiary);
+}
+
+.bg-lavender-light {
+  background-color: var(--pink-light);
+}
+
+.bg-lavender-muted {
+  background-color: var(--pink-muted);
+}
+
+.text-lavender-primary {
+  color: var(--pink-primary);
+}
+
+.text-lavender-secondary {
+  color: var(--pink-secondary);
+}
+
+.text-lavender-tertiary {
+  color: var(--pink-tertiary);
+}
+
+.text-lavender-light {
+  color: var(--pink-light);
+}
+
+.text-lavender-muted {
+  color: var(--pink-muted);
+}
+
+.border-lavender-primary {
+  border-color: var(--pink-primary);
+}
+
+.border-lavender-secondary {
+  border-color: var(--pink-secondary);
+}
+
+.border-lavender-tertiary {
+  border-color: var(--pink-tertiary);
+}
+
+.border-lavender-light {
+  border-color: var(--pink-light);
+}
+
+.border-lavender-muted {
+  border-color: var(--pink-muted);
+}
+
+.focus\:ring-lavender-primary:focus {
+  --tw-ring-color: var(--pink-primary);
+}
+
+.focus\:border-lavender-primary:focus {
+  border-color: var(--pink-primary);
+}
+
+.hover\:bg-lavender-secondary:hover {
+  background-color: var(--pink-secondary);
+}
+
+.hover\:bg-lavender-tertiary:hover {
+  background-color: var(--pink-tertiary);
+}
+
+.hover\:text-lavender-primary:hover {
+  color: var(--pink-primary);
+}
+
+.hover\:text-lavender-secondary:hover {
+  color: var(--pink-secondary);
+}
