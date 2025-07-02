@@ -3,13 +3,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LoginForm from "@/components/auth/LoginForm";
 import TwoStepRegisterForm from "@/components/auth/TwoStepRegisterForm";
+import { getBaseUrl } from "@/lib/auth";
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
 
   const handleAuthSuccess = () => {
-    // Redirect to dashboard or home page
-    window.location.href = "/";
+    // Redirect to dashboard or home page using environment-aware URL
+    window.location.href = `${getBaseUrl()}/`;
   };
 
   return (

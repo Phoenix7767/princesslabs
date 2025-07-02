@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { getCurrentUser, getAvatarUrl } from "@/lib/auth";
+import { getCurrentUser, getAvatarUrl, getBaseUrl } from "@/lib/auth";
 import { supabase } from "@/lib/supabase";
 import type { User } from "@/lib/auth";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ export default function SettingsPage() {
   useEffect(() => {
     // Redirect to /auth if not logged in
     getCurrentUser().then((u) => {
-      if (!u) window.location.href = "/auth";
+      if (!u) window.location.href = `${getBaseUrl()}/auth`;
       else setLoading(false);
     });
 
