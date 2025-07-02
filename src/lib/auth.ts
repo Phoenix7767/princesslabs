@@ -3,16 +3,12 @@ import { supabase } from "./supabase";
 // Utility function to get the base URL for redirects
 export function getBaseUrl(): string {
   if (typeof window !== "undefined") {
-    // Client-side: use the current origin
+    // Client-side: use the current origin (works for both www and non-www)
     return window.location.origin;
   }
 
-  // Server-side: use environment variables or fallback
-  if (process.env.NODE_ENV === "production") {
-    return process.env.NEXT_PUBLIC_SITE_URL || "https://princess-labs.com";
-  }
-
-  return "http://localhost:3000";
+  // Server-side fallback
+  return "https://princess-labs.com";
 }
 
 export interface User {
